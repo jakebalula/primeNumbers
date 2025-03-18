@@ -1,6 +1,7 @@
 package main
 
 import (
+  "fmt"
   "math"
   "sync"
 )
@@ -50,5 +51,8 @@ func conPrimes(limit int, numWorkers int) []int { //Finds primes using multiple 
 }
 
 func main() {
-
+  limit := 1000
+  numWorkers := 8
+  primes := conPrimes(limit, numWorkers)
+  fmt.Println("Primes: ", primes)
 }
